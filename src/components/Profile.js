@@ -8,6 +8,8 @@ const Profile = ({ avatar, name, tag, location, stats }) => {
         <img src={avatar} alt="Аватар пользователя" class="avatar" />
         <p class="name">{name}</p>
         <p class="tag">{tag}</p>
+        <p class="tag">{tag}</p>
+        <p class="location">{location}</p>
         <p class="location">{location}</p>
       </div>
 
