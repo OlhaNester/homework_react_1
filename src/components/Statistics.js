@@ -1,24 +1,20 @@
 import React from 'react';
-import ReactPropTypes from 'prop-types';
-//import StatisticList from StatisticList.js;
+import PropTypes from 'prop-types';
+import StatisticList from './StatisticList';
 
-const Statistics = ({title, stats}) => {
-    return (
-        <section class="statistics">
+const Statistics = ({ title, stats }) => {
+  return (
+    <section class="statistics">
+      {title && <h2 class="title">Upload stats</h2>}
 
-            {title && <h2 class="title">Upload stats</h2>}
+      <StatisticList stats={stats} />
+    </section>
+  );
+};
 
-            <ul class="stat-list">
-            {stats.map(({ id, label, percentage }) => (<li class="item" key={id}>
-                <span class="label">{label}</span>
-                <span class="percentage">{percentage}%</span>
-            </li>))}
-            
-                
-        
-            </ul>  
-        </section>);
-    
+Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.objectOf(PropTypes.number).isRequired,
 };
 
 export default Statistics;

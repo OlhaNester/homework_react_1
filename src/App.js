@@ -7,7 +7,6 @@ import Statistics from './components/Statistics';
 import user from './user.json';
 import stats from './statistical-data.json';
 
-
 const App = () => {
   return (
     <div>
@@ -16,12 +15,9 @@ const App = () => {
         name={user.name}
         tag={user.tag}
         location={user.location}
-        
+        stats={user.stats}
       />
-      <Statistics
-        title= "Upload stats"
-        stats={stats}
-              />
+      <Statistics title="Upload stats" stats={stats} />
       {/* <FriendList />
       <TransactionHistory />  */}
     </div>
