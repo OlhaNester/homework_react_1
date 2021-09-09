@@ -1,11 +1,13 @@
 import React from 'react';
 import Profile from './components/Profile';
-// import Statistics from './components/Statistics';
+import Statistics from './components/Statistics';
 // import FriendList from './components/FriendList';
 // import TransactionHistory from './components/TransactionHistory';
 
 import user from './user.json';
-console.log(user);
+import stats from './statistical-data.json';
+
+
 const App = () => {
   return (
     <div>
@@ -14,11 +16,14 @@ const App = () => {
         name={user.name}
         tag={user.tag}
         location={user.location}
-        stats={user.stats}
+        
       />
-      {/* <Statistics />
-      <FriendList />
-      <TransactionHistory /> */}
+      <Statistics
+        title= "Upload stats"
+        stats={stats}
+              />
+      {/* <FriendList />
+      <TransactionHistory />  */}
     </div>
   );
 };

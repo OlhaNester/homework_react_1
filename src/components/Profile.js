@@ -1,16 +1,18 @@
-import React from 'react-dom';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const Profile = ({ avatar, name, tag, location, stats }) => {
   return (
     <div class="profile">
       <div class="description">
-        <img src={avatar} alt="Аватар пользователя" class="avatar" />
+        <img src={avatar} alt="Аватар пользователя" class="avatar" width="200"/>
         <p class="name">{name}</p>
         <p class="tag">{tag}</p>
-        <p class="tag">{tag}</p>
+       
+        
         <p class="location">{location}</p>
-        <p class="location">{location}</p>
+        
+        
       </div>
 
       <ul class="stats">
