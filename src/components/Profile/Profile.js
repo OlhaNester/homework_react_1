@@ -1,24 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import StatsItem from './StatsItem';
+import styles from './Profile.module.css';
 
 const Profile = ({ avatar, name, tag, location, stats }) => {
   return (
-    <div class="profile">
-      <div class="description">
+    <div className={styles.profile}>
+      <div className={styles.description}>
         <img
           src={avatar}
           alt="Аватар пользователя"
-          class="avatar"
+          className={styles.avatar}
           width="200"
         />
-        <p class="name">{name}</p>
-        <p class="tag">{tag}</p>
+        <p className={styles.name}>{name}</p>
+        <p className={styles.tag}>@{tag}</p>
 
-        <p class="location">{location}</p>
+        <p className={styles.location}>{location}</p>
       </div>
 
-      <ul class="stats">
+      <ul className={styles.stats}>
         <StatsItem label="Followers" quantity={stats.followers} />
         <StatsItem label="Views" quantity={stats.views} />
         <StatsItem label="Likes" quantity={stats.likes} />

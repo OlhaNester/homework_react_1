@@ -1,11 +1,12 @@
 import React from 'react';
+import styles from './Profile.module.css';
 import PropTypes from 'prop-types';
 
 const StatsItem = ({ label, quantity }) => {
   return (
     <li>
-      <span class="label">{label}</span>
-      <span class="quantity">{quantity}</span>
+      <span className={styles.label}>{label}</span>
+      <span className={styles.quantity}>{quantity}</span>
     </li>
   );
 };
