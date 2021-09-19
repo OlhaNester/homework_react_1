@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import StatisticList from './StatisticList';
+import styles from './Statistics.module.css';
 
 const Statistics = ({ title, stats }) => {
   return (
-    <section class="statistics">
-      {title && <h2 class="title">Upload stats</h2>}
+    <section className={styles.statistics}>
+      {title && <h2 className={styles.title}>Upload stats</h2>}
 
       <StatisticList stats={stats} />
     </section>

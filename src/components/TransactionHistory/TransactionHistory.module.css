@@ -1,0 +1,24 @@
+.table {
+  padding: 20px;
+  margin: 20px auto auto;
+  width: 75%;
+  text-align: center;
+  border: 1px solid rgb(178, 182, 182);
+  background: white;
+}
+.thead {
+  text-transform: uppercase;
+  background: rgb(71, 28, 62);
+  color: white;
+}
+
+.tbody {
+  color: rgb(144, 61, 126);
+}
+
+.type_trans {
+  text-transform: capitalize;
+}
+.tr:nth-child(2n) {
+  background-color: rgb(178, 182, 182);
+}

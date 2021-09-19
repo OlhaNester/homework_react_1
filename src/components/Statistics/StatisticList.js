@@ -1,10 +1,11 @@
 import React from 'react';
 import StatisticsItem from './StatisticsItem';
 import PropTypes from 'prop-types';
+import styles from './Statistics.module.css';
 
 const StatisticList = ({ stats }) => {
   return (
-    <ul class="stat-list">
+    <ul className={styles.stat_list}>
       {stats.map(({ id, label, percentage }) => (
         <StatisticsItem id={id} label={label} percentage={percentage} />
       ))}

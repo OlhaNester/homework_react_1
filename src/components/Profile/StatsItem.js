@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const StatsItem = ({ label, quantity }) => {
   return (
-    <li>
+    <li className={styles.item}>
       <span className={styles.label}>{label}</span>
       <span className={styles.quantity}>{quantity}</span>
     </li>
